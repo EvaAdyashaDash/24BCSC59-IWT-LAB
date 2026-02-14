@@ -1,65 +1,166 @@
 <html>
 <head>
-<title>AURUM GOLD</title>
+    <title>Aurum Gold</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 50px;
+            align-items: center;
+        }
+        nav h2 {
+            color: gold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        nav ul li {
+            cursor: pointer;
+        }
+        .btn-nav {
+            padding: 8px 15px;
+            border: 1px solid gold;
+            background: transparent;
+            color: gold;
+            cursor: pointer;
+        }
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+        }
+        .hero-text {
+            max-width: 500px;
+        }
+        .hero-text h1 {
+            font-size: 48px;
+            line-height: 1.2;
+        }
+        .hero-text span {
+            color: gold;
+        }
+        .hero-text p {
+            margin: 20px 0;
+            color: #ccc;
+        }
+        .btn-gold {
+            padding: 12px 20px;
+            background: gold;
+            color: black;
+            border: none;
+            margin-right: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-outline {
+            padding: 12px 20px;
+            border: 1px solid gold;
+            background: transparent;
+            color: gold;
+            cursor: pointer;
+        }
+        .price-box {
+            background: #1c1c1c;
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+        }
+        .price-box h2 {
+            color: gold;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .stat-card {
+            background: #2a2a2a;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .stat-card h3 {
+            margin: 5px 0;
+        }
+        .bottom-stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px;
+            background: rgba(0,0,0,0.4);
+            margin-top: 40px;
+        }
+        .bottom-stats div {
+            text-align: center;
+        }
+        .bottom-stats h3 {
+            color: gold;
+        }
+    </style>
 </head>
 <body>
-<nav>
-<h1>AURUM GOLD</h1>
-<div align="right">
-<a href="/SERVICES/">SERVICES</a>|
-<a href="/WHY GOLD/">WHY GOLD</a>|
-<a href="/PRODUCTS/">PRODUCTS</a>|
-<a href="/REVIEWS/">REVIEWS</a>|
-<a href="/CONTACT/">CONTACT</a>|
-<input type="button" name="SELL GOLD" value="SELL GOLD">
-<input type="button" name="BUY GOLD" value="BUY GOLD">
-</div>
-</nav>
-<div>
-<ul>
-<div align="left">
-<li><h4>MARKET OPEN-TRADING LIVE</h4></li>
-</ul>
-</div>
-<div align="left">
-<h2><i>INVEST IN GOLD<br> SECURE YOUR <br>FUTURE</i></h2>
-<p><br>Experience premimum gold trading with competitive rates, <br>secure storage and expert guidance.Join thousands of <br>investor who trust us with their precious metals portfolio</p>
-</div>
-<div align="left">
-<input type="button" name="EXPLORE PRODUCTS" value="EXPLORE PRODUCTS">
-<input type="button" name="GET FREE CONSULTATION" value="GET FREE CONSULTATION">
-</div>
-<div align="right">
-<table cellpadding=5 cellspacing=5>
-<th>GOLD SPOT PRCE(US/IND)</th>
-<tr>
-<td><font size=15>$6,241.50</font></td></tr>
-<tr>
-<td>1282%(+$5682.25)</td>
-</tr>
-</div>
-<div align="right">
-<table width=15% height=10 border=2 cellpadding=5 cellspacing=5 bgcolor="white">
-<tr>
-<td>SERVER(XAG)<br>
-$31.42
-<ul>+128%</ul>
-<td>PLATINUM(XPT)<br>
-$1,024.80
-<ul>-0.4%</ul></td>
-</tr>
-<tr>
-<td>PALLADIUM(XPD)<br>
-$986.50
-<ul>+0.82</ul></td>
-<td>GOLDSILVER RATIO<Br>
-136.4
-<ul>+105%</ul></td>
-</tr>
-</div>
-<div>
-
-
-</table>
+    <nav>
+        <h2>AURUM GOLD</h2>
+        <ul>
+            <li>About</li>
+            <li>Market</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+        </ul>
+        <button class="btn-nav">Sign In</button>
+    </nav>
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Invest in <span>Gold</span><br>Secure Your Future</h1>
+            <p>Experience premium gold trading with competitive rates, secure storage, and expert guidance.</p>
+            <button class="btn-gold">Explore Products</button>
+            <button class="btn-outline">Get Free Consultation</button>
+        </div>
+        <div class="price-box">
+            <h2>$6,241.50</h2>
+            <p style="color: lightgreen;">+1.24% Today</p>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>$90,650</h3>
+                    <p>Trade Volume</p>
+                </div>
+                <div class="stat-card">
+                    <h3>$1.48</h3>
+                    <p>Market Price</p>
+                </div>
+                <div class="stat-card">
+                    <h3>$102.30</h3>
+                    <p>High Value</p>
+                </div>
+                <div class="stat-card">
+                    <h3>$96.4</h3>
+                    <p>Low Value</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-stats">
+        <div>
+            <h3>$2.5B+</h3>
+            <p>Assets Under Management</p>
+        </div>
+        <div>
+            <h3>50K+</h3>
+            <p>Active Clients</p>
+        </div>
+        <div>
+            <h3>15+</h3>
+            <p>Years Experience</p>
+        </div>
+    </div
 </body>
 </html>
