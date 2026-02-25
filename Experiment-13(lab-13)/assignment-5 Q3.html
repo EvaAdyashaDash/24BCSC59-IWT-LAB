@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Q3</title>
+<script language="javascript">
+let n=parseInt(prompt("enter the number"));
+let rev=0,rem;
+let sum=0;
+let num=n;
+do
+{
+rem=n%10;
+rev=rev*10+rem;
+n=n/10;
+}
+while(n!=0)
+document.write("reverse is"+rev)
+if(sum==n)
+document.write("palindrome"+num);
+else
+document.write("not a palindrome"+num);
+</script>
+</head>
+<body bgcolor="pink" text="black">
+</body>
+</html>
