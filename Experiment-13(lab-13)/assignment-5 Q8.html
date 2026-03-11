@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Q8</title>
+<h1>prime or not</h1>
+<script language="javascript">
+let a=prompt("enter a number:");
+function isprime(num)
+{
+if(num<=1)
+return false;
+for(let i=2;i<=math.sqrt(num);i++)
+{
+if(num%i==0)
+return false;
+}
+}
+return true;
+}
+let res=isprime(a);
+document.write("<p>the number<b>"+ a +"</b> is prime:<b>"+ res +"</b></p>");
+</script>
+</head>
+</html>

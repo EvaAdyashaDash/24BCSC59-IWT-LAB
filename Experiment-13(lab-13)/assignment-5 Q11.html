@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>a5q11</title>
+</head>
+<body>
+<script language="javascript">
+function reverseArray(arr) {
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left < right) {
+   
+    let temp = arr[left];
+    arr[left] = arr[right];
+    arr[right] = temp;
+
+    left++;
+    right--;
+  }
+  return arr;
+}
+
+const myNums = [10, 20, 30, 40, 50];
+document.write(reverseArray(myNums)); // [50, 40, 30, 20, 10]
+</script>
+</body>
+</html>
