@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Feedback</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-image">
+  <button onclick="window.location.href='index.html'" style="margin: 10px;">🔙Back to Home</button>
+
+  <header>
+    <h1>Feedback</h1>
+    <nav>
+      <a href="index.html">Home🌐</a>
+      <a href="product.html">Products🛍️</a>
+      <a href="login.html">Login👤</a>
+      <a href="cart.html">Cart 🛒</a>
+      <a href="wishlist.html">Wishlist ❤️</a>
+    </nav>
+  </header>
+
+  <div class="login-box" style="width: 400px;">
+    <h2>We Value Your Feedback</h2>
+    <form onsubmit="alert('Thank you for your feedback!'); window.location.href='index.html'; return false;">
+      <input type="text" placeholder="Your Name" required><br>
+      <input type="email" placeholder="Your Email" required><br>
+      <textarea placeholder="Your Feedback" rows="5"
+        style="width: 90%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px; font-family: 'Outfit', sans-serif; resize: vertical;"
+        required></textarea><br>
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </div>
+
+  <footer
+    style="text-align: center; padding: 30px 20px; margin: 40px 20px 20px 20px; background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); border: 1px solid rgba(255, 255, 255, 0.4);">
+    <h2 style="color: #d81b60; margin-bottom: 10px;">💖 Thank You For Your Feedback! 💖</h2>
+    <p style="font-size: 1.1em; color: #555; margin: 0;">We appreciate you taking the time to help us improve SAVAYA.
+      Have a great day!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

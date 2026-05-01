@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-image">
+  <button onclick="window.location.href='index.html'" style="margin: 10px;">🔙Back to Home</button>
+
+  <div class="center-page glass-panel checkout-box">
+    <h1>💳 Checkout</h1>
+
+    <form onsubmit="return placeOrder()">
+      <input type="text" id="checkoutName" placeholder="Full Name" required><br>
+      <input type="text" id="checkoutAddress" placeholder="Address" required><br>
+      <input type="text" id="checkoutCity" placeholder="City" required><br>
+      <input type="number" id="checkoutPincode" placeholder="Pincode" required><br>
+      <input type="tel" id="checkoutPhone" placeholder="Phone Number" required><br>
+      <input type="phone" id="checkoutAltPhone" placeholder="Alternate Phone Number"><br>
+
+      <h3>Payment Method</h3>
+      <select id="paymentMethod" onchange="toggleBankDetails()" required>
+        <option value="" disabled selected>Select Payment Method</option>
+        <option value="UPI">UPI</option>
+        <option value="Credit Card">Credit Card</option>
+        <option value="Cash on Delivery">Cash on Delivery</option>
+      </select><br><br>
+
+      <div id="bankDetails" class="bank-details" style="display: none;">
+        <h4 id="bankTitle">Bank Details</h4>
+        <div id="upiFields" style="display: none;">
+          <input type="text" id="upiId" placeholder="Enter UPI ID (e.g., name@bank)"><br>
+        </div>
+        <div id="cardFields" style="display: none;">
+          <input type="text" id="cardNumber" placeholder="Card Number" maxlength="16"><br>
+          <input type="text" id="expiryDate" placeholder="Expiry Date (MM/YY)"><br>
+          <input type="password" id="cvv" placeholder="CVV" maxlength="3"><br>
+        </div>
+      </div>
+
+      <button type="submit" style="width: 90%;">Place Order</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Order Confirmed</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body class="bg-image"
+  style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; font-family: 'Outfit', sans-serif;">
+  <div style="width: 100%; padding: 10px;">
+    <button onclick="window.location.href='index.html'"
+      style="margin: 10px; background: white; color: #d81b60; border: 1px solid #d81b60; padding: 8px 15px; border-radius: 20px; cursor: pointer; transition: 0.3s;"
+      onmouseover="this.style.background='#d81b60'; this.style.color='white'"
+      onmouseout="this.style.background='white'; this.style.color='#d81b60'">🔙 Back to Home</button>
+  </div>
+
+  <div
+    style="text-align:center; margin-top:50px; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 500px; width: 90%; border: 1px solid rgba(255, 255, 255, 0.4);">
+    <div style="font-size: 60px; margin-bottom: 20px;">🛍️</div>
+    <h1 style="color: #d81b60; margin-bottom: 15px; font-family: 'Playfair Display', serif; font-style: italic;">Order
+      Preparing!</h1>
+    <p style="color: #555; margin-bottom: 25px; font-size: 1.1em; font-weight: 600;">Your fashion is on the way. We'll
+      notify you once it ships.</p>
+    <a href="index.html"><button
+        style="background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%); color: white; border: none; padding: 12px 30px; border-radius: 25px; font-size: 1rem; cursor: pointer; transition: 0.3s; font-family: 'Outfit', sans-serif; font-weight: bold;"
+        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Go
+        Home</button></a>
+  </div>
+
+  <!-- The Celebration Popup -->
+  <div id="orderPopup" class="order-popup">
+    <div class="popup-content">
+      <div class="success-icon">✔️</div>
+      <h2>🎉 Order Placed Successfully!</h2>
+      <p>Thank you for shopping with us. Your order is on the way!</p>
+      <div class="popup-buttons">
+        <button class="track-btn" onclick="alert('Tracking information will be available soon!')">Track Order</button>
+        <button class="shop-btn" onclick="window.location.href='index.html'">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function playSuccessSound() {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const playNote = (frequency, startTime, duration) => {
+          const oscillator = audioCtx.createOscillator();
+          const gainNode = audioCtx.createGain();
+          oscillator.type = 'sine';
+          oscillator.frequency.setValueAtTime(frequency, audioCtx.currentTime + startTime);
+          gainNode.gain.setValueAtTime(0, audioCtx.currentTime + startTime);
+          gainNode.gain.linearRampToValueAtTime(0.2, audioCtx.currentTime + startTime + 0.05);
+          gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + startTime + duration);
+          oscillator.connect(gainNode);
+          gainNode.connect(audioCtx.destination);
+          oscillator.start(audioCtx.currentTime + startTime);
+          oscillator.stop(audioCtx.currentTime + startTime + duration);
+        };
+        // A magical celebration chord
+        playNote(523.25, 0, 0.4); // C5
+        playNote(659.25, 0.1, 0.4); // E5
+        playNote(783.99, 0.2, 0.6); // G5
+        playNote(1046.50, 0.3, 0.8); // C6
+      } catch (e) {
+        console.log("Audio not supported");
+      }
+    }
+
+    window.onload = () => {
+      // Show Popup with animation
+      setTimeout(() => {
+        const popup = document.getElementById('orderPopup');
+        popup.classList.add('show');
+
+        // Best effort to play sound (browsers may block auto-play if no recent interaction, but usually fine on redirect click)
+        playSuccessSound();
+
+        // Fire Confetti
+        var duration = 3.5 * 1000;
+        var animationEnd = Date.now() + duration;
+        var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 10000, colors: ['#ff9a9e', '#fecfef', '#d81b60', '#ff7eb3'] };
+
+        function randomInRange(min, max) {
+          return Math.random() * (max - min) + min;
+        }
+
+        var interval = setInterval(function () {
+          var timeLeft = animationEnd - Date.now();
+
+          if (timeLeft <= 0) {
+            return clearInterval(interval);
+          }
+
+          var particleCount = 50 * (timeLeft / duration);
+          confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+          confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+        }, 250);
+
+        // Auto dismiss popup
+        setTimeout(() => {
+          popup.classList.remove('show');
+        }, 5000);
+
+      }, 100);
+    };
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sign Up Page</title>
+<style>
+body{
+  background-attachment: fixed;
+  background: linear-gradient(to bottom,#B5B7FF,#D2CFFF,#EAF6FC);
+  min-height: 100vh;
+  margin: 0;
+}
+.auth-container {
+  width: 300px;
+  margin: 100px auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow:0 0 10px grey;
+}
+
+.auth-container input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.auth-container button {
+  padding: 10px;
+  width: 100%;
+  background: #B5B7FF;
+  color: white;
+  border: none;
+}
+.auth-container button:hover { background: #D2CFFF; }
+
+.top{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size:28px;
+  font-family:Arial;
+}
+</style>
+
+<script>
+function signup(){
+	window.location.href="home.html"
+}
+</script>
+
+</head>
+<body>
+<div class="top">
+		<h1> T O M A D O </h1>
+		<p>To My Door</p>
+</div>
+<div class="auth-container">
+  <h2>Signup</h2>
+  <input type="text" id="name" placeholder="Name">
+  <input type="email" id="email" placeholder="Email">
+  <input type="password" id="password" placeholder="Password">
+  <input type="password" id="cpassword" placeholder="Confirm Password">
+  <button onclick="signup()">Signup</button>
+
+  <p>Already have an account? <a href="index.html">Login</a></p>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SAVAYA APP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-image">
+
+  <header>
+    <div class="logo-container">
+      <img src="SAVAYA LOGO.jpg.jpeg" alt="SAVAYA LOGO" class="logo">
+      <h1>WELCOME TO SAVAYA</h1>
+    </div>
+    <div style="display: flex; align-items: center; gap: 15px;">
+      <nav>
+        <a href="index.html">Home🌐</a>
+        <a href="product.html">Products🛍️</a>
+        <a href="about.html">About Us🏢</a>
+        <a href="login.html">Login👤</a>
+        <a href="cart.html">Cart🛒</a>
+        <a href="wishlist.html">Wishlist❤️ </a>
+        <a href="feedback.html">Feedback📝 </a>
+      </nav>
+      <div id="userProfileDisplay" style="display: none; align-items: center; gap: 10px; cursor: pointer; background: rgba(255,255,255,0.7); padding: 5px 15px 5px 5px; border-radius: 25px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);" onclick="window.location.href='login.html'">
+        <div id="userInitials" style="width: 35px; height: 35px; border-radius: 50%; background: #ff7eb3; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em;"></div>
+        <span id="userWelcomeName" style="font-weight: bold; color: #333;"></span>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="bg-slider"></div>
+    <div class="hero-content">
+      <h2 style="color: palevioletred;">Shop the vibe.Own the moment</h2>
+      <h3>Let Your Style Speak For Itself!!</h3>
+      <h3>Too Glam To Give A Damn!!</h3>
+      <p>Shop | Dresses👗 | Accessories📿 | Shoes👟 | Sunglasses🕶️</p>
+      <button onclick="goNext()">Let's Gooo!!!</button>
+    </div>
+  </section>
+
+  <section class="banners">
+    <div class="banner sale-banner">
+      <div class="banner-content">
+        <h3> ⚡FLASH SALE ⚡</h3>
+        <p>Up to 50% Off on Summer Collections</p>
+        <button class="banner-btn">Shop Sale</button>
+      </div>
+    </div>
+    <div class="banner discount-banner">
+      <div class="banner-content">
+        <h3>🎊 EXTRA 20% OFF 🎊 </h3>
+        <p>On Trendy New Arrivals</p>
+        <button class="banner-btn">Explore Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin: 40px 20px 10px 20px;">
+    <h2 style="border-bottom: 2px solid #ff7eb3; display: inline-block; padding-bottom: 5px;">🌟 Recommended for You 🌟
+    </h2>
+    <div id="recommendedItems"></div>
+  </section>
+
+  <section>
+    <h2>About Us💼 </h2>
+    <p>We provide trendy fashion for Gen-Z with stylish collections.</p>
+    <p>The Savana app is a Gen Z-focused fashion e-commerce platform launched by UK-based Urbanic, offering trendy,
+      affordable apparel and accessories.</p>
+    <p>It features daily new styles, AI-powered personalized recommendations, and a "social-first" approach aimed at
+      trendsetters.</p>
+    <p> The app is available on both iOS and Android for purchasing clothes and accessories.</p>
+  </section>
+
+  <section>
+    <h2>Terms & Conditions🧾</h2>
+    <p>All sales subject to availability. No return after 7 days.</p>
+  </section>
+
+  <section class="features">
+    <div>
+      <P> Free Delivery🎁</p>
+      <p>For orders 990+</p>
+    </div>
+    <div>
+      <p>Easy returns🌟</p>
+      <p>Free pick up</p>
+    </div>
+    <div>
+      <p>Fast delivery🚚</p>
+      <p>4000+ styles</p>
+    </div>
+  </section>
+
+  <footer style="text-align: center; padding: 30px 20px; margin: 40px 20px 20px 20px; background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); border: 1px solid rgba(255, 255, 255, 0.4);">
+    <h2 style="color: #d81b60; margin-bottom: 10px;">💖 Thank You For Visiting! 💖</h2>
+    <p style="font-size: 1.1em; color: #555; margin: 0;">We hope you found your next favorite style at SAVAYA. Come back soon!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

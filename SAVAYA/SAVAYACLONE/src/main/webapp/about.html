@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>About Us & Site Map - SAVAYA</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .sitemap-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+      margin: 40px 20px;
+    }
+
+    .sitemap-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      padding: 30px 20px;
+      border-radius: 20px;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 10px 30px rgba(255, 126, 179, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sitemap-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(255, 117, 140, 0.1) 0%, rgba(255, 126, 179, 0.1) 100%);
+      z-index: 0;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .sitemap-card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 15px 40px rgba(255, 117, 140, 0.3);
+      border-color: #ff7eb3;
+    }
+
+    .sitemap-card:hover::before {
+      opacity: 1;
+    }
+
+    .sitemap-card .icon {
+      font-size: 3em;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+
+    .sitemap-card:hover .icon {
+      transform: scale(1.2) rotate(5deg);
+    }
+
+    .sitemap-card h3 {
+      color: #333;
+      margin: 0;
+      font-size: 1.5em;
+      position: relative;
+      z-index: 1;
+    }
+
+    .sitemap-card p {
+      color: #666;
+      font-size: 0.9em;
+      margin-top: 10px;
+      position: relative;
+      z-index: 1;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5em;
+      color: #111;
+      text-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #555;
+      margin-bottom: 40px;
+      font-weight: 500;
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 1.6;
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+
+<body class="bg-image">
+  <button onclick="window.location.href='index.html'" style="margin: 10px;">🔙Back to Home</button>
+  <header>
+    <div class="logo-container">
+      <img src="SAVAYA LOGO.jpg.jpeg" alt="SAVAYA LOGO" class="logo">
+      <h1>SAVAYA</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home🌐</a>
+      <a href="product.html">Products🛍️</a>
+      <a href="about.html">About Us🏢</a>
+      <a href="login.jsp">Login👤</a>
+      <a href="cart.html">Cart🛒</a>
+      <a href="wishlist.html">Wishlist❤️ </a>
+      <a href="feedback.jsp">Feedback📝 </a>
+    </nav>
+  </header>
+
+  <section class="glass-panel" style="margin: 40px auto; max-width: 900px;">
+    <h2 class="section-title">About SAVAYA 💖</h2>
+    <div class="about-content">
+      <p>Welcome to <strong>SAVAYA</strong>, your ultimate destination for trendy, Gen-Z focused fashion. We believe
+        that style should be accessible, expressive, and fun.</p>
+      <p>Our platform offers a curated collection of daily new styles, ranging from chic dresses and stylish accessories
+        to comfy shoes and trendy sunglasses. With AI-powered personalized recommendations and a vibrant, "social-first"
+        approach, we aim to inspire trendsetters everywhere.</p>
+      <p>Whether you're shopping for a casual day out or a glamorous night, SAVAYA ensures you're always dressed to
+        impress. <strong>Too Glam To Give A Damn!</strong></p>
+    </div>
+  </section>
+
+  <section style="background: transparent; box-shadow: none; border: none; backdrop-filter: none;">
+    <h2 class="section-title">Explore Our Site Map 🗺️</h2>
+    <p class="section-subtitle">Navigate effortlessly through the SAVAYA universe</p>
+
+    <div class="sitemap-container">
+      <a href="index.html" class="sitemap-card">
+        <div class="icon">🌐</div>
+        <h3>Home</h3>
+        <p>Discover the latest trends and our exclusive collections.</p>
+      </a>
+
+      <a href="product.html" class="sitemap-card">
+        <div class="icon">🛍️</div>
+        <h3>Products</h3>
+        <p>Browse our entire catalog of trendy clothing and accessories.</p>
+      </a>
+
+      <a href="cart.html" class="sitemap-card">
+        <div class="icon">🛒</div>
+        <h3>Shopping Cart</h3>
+        <p>Review and manage the items you're ready to purchase.</p>
+      </a>
+
+      <a href="wishlist.html" class="sitemap-card">
+        <div class="icon">❤️</div>
+        <h3>Wishlist</h3>
+        <p>Keep track of your favorite styles for future shopping.</p>
+      </a>
+
+      <a href="checkout.jsp" class="sitemap-card">
+        <div class="icon">💳</div>
+        <h3>Checkout</h3>
+        <p>Securely complete your purchase and track your order.</p>
+      </a>
+
+      <a href="order.html" class="sitemap-card">
+        <div class="icon">📦</div>
+        <h3>Order Tracking</h3>
+        <p>Check the status and history of your recent orders.</p>
+      </a>
+
+      <a href="login.jsp" class="sitemap-card">
+        <div class="icon">👤</div>
+        <h3>Login / Signup</h3>
+        <p>Access your personal account, saved items, and details.</p>
+      </a>
+
+      <a href="feedback.jsp" class="sitemap-card">
+        <div class="icon">📝</div>
+        <h3>Feedback</h3>
+        <p>Share your thoughts with us to help us improve your experience.</p>
+      </a>
+    </div>
+  </section>
+
+  <footer
+    style="text-align: center; padding: 30px 20px; margin: 40px 20px 20px 20px; background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); border: 1px solid rgba(255, 255, 255, 0.4);">
+    <h2 style="color: #d81b60; margin-bottom: 10px;">💖 Thank You For Visiting! 💖</h2>
+    <p style="font-size: 1.1em; color: #555; margin: 0;">We hope you found your next favorite style at SAVAYA. Come back
+      soon!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

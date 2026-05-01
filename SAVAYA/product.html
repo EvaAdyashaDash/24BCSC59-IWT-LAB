@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-image">
+  <button onclick="window.location.href='index.html'" style="margin: 10px;">🔙Back to Home</button>
+
+  <header>
+    <h1>Our Collections</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart 🛒</a>
+      <a href="login.html">Login👤</a>
+      <a href="wishlist.html">❤️</a>
+    </nav>
+  </header>
+
+  <header class="glass">
+    <h1>Shop</h1>
+    <div class="filter-sort-container" style="display: flex; gap: 15px; margin-top: 15px; flex-wrap: wrap;">
+      <input type="text" placeholder="Search..." onkeyup="applyFiltersAndSort()" style="flex: 1; min-width: 200px;">
+
+      <select id="sortSelect" onchange="handleSortChange(this.value)"
+        style="padding: 10px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.3); background: rgba(255, 255, 255, 0.2); color: #333; outline: none; font-size: 1rem; cursor: pointer; backdrop-filter: blur(10px);">
+        <option value="default">Sort By: Default</option>
+        <option value="popularity">Popularity</option>
+        <option value="priceAsc">Price: Low to High</option>
+        <option value="priceDesc">Price: High to Low</option>
+        <option value="newest">Newest Arrivals</option>
+      </select>
+
+      <select id="filterSelect" onchange="handleFilterChange(this.value)"
+        style="padding: 10px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.3); background: rgba(255, 255, 255, 0.2); color: #333; outline: none; font-size: 1rem; cursor: pointer; backdrop-filter: blur(10px);">
+        <option value="all">Filter By: All Prices</option>
+        <option value="under1000">Under ₹1000</option>
+        <option value="1000to2000">₹1000 - ₹2000</option>
+        <option value="over2000">Over ₹2000</option>
+      </select>
+    </div>
+  </header>
+  <div id="productList"></div>
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
